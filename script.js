@@ -1,50 +1,8 @@
 //Splash Screen
 setTimeout(function () {
-  document.getElementById('loader-container').style.display = 'none';
-  document.body.style.overflow = 'auto';
+  document.getElementById("loader-container").style.display = "none";
+  document.body.style.overflow = "auto";
 }, 2000);
-
-//curser
-// function curser() {
-//   const cursor = document.getElementById('cursor');
-//   const dot = document.getElementsByClassName('dot');
-//   document.addEventListener("mousemove", function (dets) {
-//     gsap.to(cursor, {
-//       transform: `translate(-50%,-50%) scale(1)`,
-//       left: dets.x,
-//       top: dets.y,
-//     });
-//   });
-//   document.addEventListener("mouseleave", function (dets) {
-//     gsap.to(cursor, {
-//       transform: `translate(-50%,-50%) scale(0)`,
-//     });
-
-//   });
-//   document.addEventListener("mouseenter", function (dets) {
-//     gsap.to(cursor, {
-//       transform: `translate(-50%,-50%) scale(1)`,
-//     });
-//   });
-//   document.addEventListener('click', () => {
-//     gsap.fromTo(cursor, { transform: `translate(-50%,-50%) scale(.5)` }, { transform: `translate(-50%,-50%) scale(1)` });
-//   });
-// }
-// curser();
-
-// function navbar() {
-//   let prevScrollpos = window.pageYOffset;
-//   window.onscroll = function () {
-//     let currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos > currentScrollPos) {
-//       document.getElementById("navbar").style.top = "0";
-//     } else {
-//       document.getElementById("navbar").style.top = "-80px";
-//     }
-//     prevScrollpos = currentScrollPos;
-//   };
-// }
-// navbar();
 
 function hamwork() {
   const hambox = document.querySelector(".ham-box");
@@ -61,7 +19,7 @@ function hamwork() {
         opacity: 1,
         scale: 1,
       });
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
       hambox.classList.remove("open");
       hamopen = false;
@@ -70,8 +28,7 @@ function hamwork() {
         opacity: 0,
         scale: 0,
       });
-      document.body.style.overflow = '';
-
+      document.body.style.overflow = "";
     }
   });
 
@@ -85,9 +42,8 @@ function hamwork() {
           opacity: 1,
           scale: 1,
         });
-        document.body.style.overflow = 'hidden';
-      }
-      else {
+        document.body.style.overflow = "hidden";
+      } else {
         hambox.classList.remove("open");
         hamopen = false;
         gsap.to(hambarbox, {
@@ -95,8 +51,7 @@ function hamwork() {
           opacity: 0,
           scale: 0,
         });
-        document.body.style.overflow = '';
-
+        document.body.style.overflow = "";
       }
     });
   });
@@ -105,7 +60,10 @@ hamwork();
 
 function hambarboxHeight() {
   const navHeight = document.querySelector("#navbar").offsetHeight;
-  document.documentElement.style.setProperty('--scroll-padding', navHeight + 'px');
+  document.documentElement.style.setProperty(
+    "--scroll-padding",
+    navHeight + "px"
+  );
 }
 hambarboxHeight();
 
@@ -138,7 +96,7 @@ gsap.from("#about>h2", {
     trigger: "#about>h2",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
 gsap.from("#about .rightAbout img", {
   scale: 1.3,
@@ -148,7 +106,7 @@ gsap.from("#about .rightAbout img", {
     start: "top 80%",
     end: "top 5%",
     scrub: 3,
-  }
+  },
 });
 gsap.from("#about .mainAbout", {
   y: 20,
@@ -157,7 +115,7 @@ gsap.from("#about .mainAbout", {
     trigger: "#about",
     scroller: "body",
     start: "top 70%",
-  }
+  },
 });
 
 gsap.from("#project>h2", {
@@ -167,9 +125,8 @@ gsap.from("#project>h2", {
     trigger: "#project",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
-
 
 const projectCard = document.querySelectorAll(".projectCard");
 
@@ -180,7 +137,7 @@ projectCard.forEach(function (elem) {
     scrollTrigger: {
       trigger: elem,
       start: "top 95%",
-    }
+    },
   });
 });
 
@@ -206,7 +163,7 @@ gsap.from("#contact>h2", {
     trigger: "#contact>h2",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
 
 gsap.from("#left-contact h3", {
@@ -217,7 +174,7 @@ gsap.from("#left-contact h3", {
     trigger: "#left-contact h3",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
 gsap.from("#left-contact p", {
   y: 20,
@@ -226,7 +183,7 @@ gsap.from("#left-contact p", {
     trigger: "#left-contact p",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
 gsap.from("#left-contact button", {
   y: 20,
@@ -235,7 +192,7 @@ gsap.from("#left-contact button", {
     trigger: "#left-contact button",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
 
 gsap.from("#right-contact h3", {
@@ -245,7 +202,7 @@ gsap.from("#right-contact h3", {
     trigger: "#right-contact h3",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
 gsap.from("#right-contact form", {
   y: 20,
@@ -254,8 +211,7 @@ gsap.from("#right-contact form", {
     trigger: "#right-contact form",
     scroller: "body",
     start: "top 90%",
-
-  }
+  },
 });
 gsap.from("footer", {
   opacity: 0,
@@ -263,5 +219,5 @@ gsap.from("footer", {
     trigger: "footer",
     scroller: "body",
     start: "top 90%",
-  }
+  },
 });
