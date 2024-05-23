@@ -2,7 +2,7 @@
 setTimeout(function () {
   document.getElementById("loader-container").style.display = "none";
   document.body.style.overflow = "auto";
-}, 2000);
+}, 1000);
 
 function hamwork() {
   const hambox = document.querySelector(".ham-box");
